@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  font-size: 18px;
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --dark-blue: #2e3349;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body::before,
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+body::before {
+  background-image: url(images/bg-pattern-top.svg);
+}
+body::after {
+  background-image: url(images/bg-pattern-bottom.svg);
+}
+main {
+  width: 350px;
+  height: 374px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  border: solid 1px var(--dark-gray);
+  border-radius: 15px 15px 5px 5px;
+  box-shadow: 0px 50px 100px #08465e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-img img {
+  margin-top: -50%;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+.profile-info {
+  font-size: 18px;
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+}
+.age {
+  color: var(--dark-gray);
+}
+.profile-info h1 {
+  margin: -40px 0px 7px 0px;
+}
+.profile-info p {
+  font-size: 14px;
+
+  color: var(--dark-grayish-blue);
+}
+.profile-attr {
+  width: 244px;
+}
+.profile-attr ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 23px;
+}
+.profile-attr ul li {
+  text-align: center;
+  font-size: 18px;
+  color: var(--dark-blue);
+}
+.profile-attr ul li span {
+  text-align: center;
+  font-size: 10px;
+  display: block;
+  color: var(--dark-grayish-blue);
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  main {
+    width: 326px;
+    border: 0;
+  }
+  body::before {
+    left: -45%;
+    top: -20%;
+  }
+  body::after {
+    right: -45%;
+    bottom: -65%;
+  }
+}
+@media (min-width: 769px) {
+  body::before {
+    left: -5%;
+    top: -45%;
+  }
+  body::after {
+    right: -55%;
+    bottom: -50%;
+  }
+}
