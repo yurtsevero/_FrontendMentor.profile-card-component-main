@@ -110,10 +110,12 @@ main {
 .profile-attr ul li {
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   color: var(--dark-blue);
 }
 .profile-attr ul li span {
   text-align: center;
+  margin-top: 5px;
   font-size: 10px;
   display: block;
   color: var(--dark-grayish-blue);
